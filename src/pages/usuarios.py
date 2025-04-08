@@ -9,7 +9,7 @@ columns = int(columns)
 title = "SISTEMA DE VENDAS"
 padding = (columns - len(title) - 2) // 2
 
-def main():
+def display_menu():
     conn_str = util.str_conn
     repo = UsuarioRepository(conn_str)
 
@@ -38,7 +38,7 @@ def main():
             senha = input("| Senha: ")
             print("+" + "-" * (columns - 2) + "+")
             usuario = repo.criar_usuario(nome, email, senha)
-            print("Usuário criado:", usuario)
+            print("Usuário criado:", usuario.__dict__)
             print("+" + "-" * (columns - 2) + "+")
             print("Pressione Enter para continuar...")
             input()
@@ -80,4 +80,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    display_menu()

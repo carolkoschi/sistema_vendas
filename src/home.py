@@ -41,7 +41,7 @@ def home():
         choice = input("Escolha uma opção: ")
         if choice == "1":
             clear_screen()
-            usuarios.main()
+            usuarios.display_menu()
         elif choice == "2":
             clear_screen()
             print("Produtos menu not implemented yet.")
